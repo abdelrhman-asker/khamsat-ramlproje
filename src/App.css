@@ -1,38 +1,496 @@
-.App {
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #606060 !important;
+    width: 100vw;
+    overflow-x: hidden;
+    height: fit-content;
+}
+/* Start Of Animated Start Menue */
+.SpinnerMainDiv {
+  height: 90vh;
+  overflow: hidden;
+}
+.AnimatedStartLogo {
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  
+
+}
+.AnimatedStartLogo div {
+  position: relative;
+  max-width: 540px;
+}
+.AnimatedStartLogo svg {
+
+  max-width: 540px;
+}
+.CentANimatedMain {
+  position:fixed;
+  width: fit-content;
+  height: fit-content;
+  margin-top: 15px;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.RightANimatedMain h4 {
+  position: absolute;
+  color: white;
+  font-size: 60px;
+  top: 50%;
+  left: 35%;
 }
+.LeftANimatedMain h4 {
+  position: absolute;
+  color: white;
+  font-size: 60px;
+  top: -200px;
+  left: 60%;
+}
+.LemonOnSliceMainAnimat {
+  height: fit-content;
+}
+.DivLemonANimate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -200px;
+  left: -100px;
+  position: absolute;
+}
+.MainLemonSliceAnimat {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+}
+.ButCenterANimatedMain h4 {
+  position: absolute;
+  color: white;
+  font-size: 60px;
+  top: 40%;
+  left: 40%;
+  
+}
+.LeftANimatedMain {
+  margin-top: -200px;
+  left: -100px;
+  position: absolute;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: LeftAnimate 3s   ;
+}
+@keyframes LeftAnimate {
+  0% {  left: -2000px;
+        top: -100px;
+  }
+  50% {  left: -1000px;
+        top: -20px;
+  }
+  100% {  left: -100px;
+        top: 0px;
+  }
+  
+}
+.RightANimatedMain {
+  margin-top: -200px;
+  right: -100px;
+  position: absolute;
+  animation: RightAnimate 1s   ;
+}
+@keyframes RightAnimate {
+  0% {  right: -1000px;
+        top: -100px;
+  }
+  50% {  right: -500px;
+        top: -20px;
+  }
+  100% {  right: -100px;
+        top: 0px;
+  }
+  
+}
+.ButCenterANimatedMain {
+  position: absolute;
+  top: 250px;
+  left: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: centerAnimate 2s   ;
+  max-width: 540px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+}
+@keyframes centerAnimate {
+  0% {  left: 30%;;
+        top: 2000px;
+  }
+  50% {  left: 30%;;
+        top: 1000px;
+  }
+  100% {  left: 30%;;
+        top: 250px;
+  }
+  
+}
+@media screen and (min-width:940px) and (max-width:1170px) {
+  .AnimatedStartLogo div {
+    max-width: 400px;
+  }
+  .AnimatedStartLogo svg {
+  
+    max-width: 400px;
+  }
+  .ButCenterANimatedMain {
+    max-width: 400px;
+  
+  }
+  .ButCenterANimatedMain h4 {
+    font-size: 42px;
+
+  }
+  .LeftANimatedMain h4 {
+    font-size: 42px;
+
+  }
+  .RightANimatedMain h4 {
+    font-size: 42px;
+
   }
 }
+@media screen and (min-width:680px) and (max-width:940px) {
+  .AnimatedStartLogo div {
+    max-width: 300px;
+  }
+  .AnimatedStartLogo svg {
+  
+    max-width: 300px;
+  }
+  .ButCenterANimatedMain {
+    max-width: 300px;
+    top: 50px;
+    left: 30%;
+  }
+  .LeftANimatedMain {
+    margin-top: -200px;
+    left: 00px;
+  }
+  .RightANimatedMain {
+    margin-top: -200px;
+    left: 00px;
+  }
+  .ButCenterANimatedMain h4 {
+    font-size: 36px;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  }
+  .LeftANimatedMain h4 {
+    font-size: 36px;
+
+  }
+  .RightANimatedMain h4 {
+    font-size: 36px;
+
+  }
+}
+@media screen and (min-width:1px) and (max-width:680px) {
+  .CentANimatedMain {
+    margin: auto;
+    
+  }
+  .ButCenterANimatedMain {
+    display: none;
+  }
+  .LeftANimatedMain {
+    display: none;
+
+  }
+  .RightANimatedMain {
+    display: none;
+
+  }
+  .ButCenterANimatedMain h4 {
+    display: none;
+
+
+  }
+  .LeftANimatedMain h4 {
+    display: none;
+
+
+  }
+  .RightANimatedMain h4 {
+    display: none;
+
+
+  }
+}
+/* End Of Animated Start Menue */
+.OpenOnHover {
+    opacity: 0;
+    margin-top: -170px;
+    margin-left: -7px;
+    transition: opacity 0.5s ease-out;
+    width: fit-content;
+
+}
+.OpenOnHoverMain {
+    transition: opacity 0.5s ease-out;
+    width: fit-content;
+}
+.OpenOnHover:hover {
+    opacity: 3;
+}
+.OpenOnHoverMain:hover + .OpenOnHover {
+    opacity: 3;
+}
+
+
+
+/* Start of MainNAv section */
+.MainNavCon .row {
+    height: 10vh;
+    align-items: center;
+    display: flex;
+    text-align: center;
+}
+.wrapper{
+    margin: 0px 0px;
+  }
+  
+  .wrapper .search-input{
+    background: #fff;
+    color: black;
+    font-weight: bold;
+    border-radius: 25px;
+    position: relative;
+    box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+    height: fit-content;
+    width: 156px;
+
+  }
+  .search-input input{
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    padding: 0 10px 0 20px;
+    font-size: 18px;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+    height: fit-content;
+    position: relative;
+
+
+  }
+  
+  .search-input.active input{
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .search-input .autocom-box{
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    max-height: 280px;
+    overflow-y: auto;
+    
+  }
+  
+  .search-input.active .autocom-box{
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+    
+  }
+  .search-input.active .autocom-box li{
+    display: block;
+    
+  }
+  .autocom-box li:hover{
+    background: #efefef;
+  }
+  
+  .search-input .icon{
+    position: absolute;
+    left: 0px;
+    top: -5px;
+    width: 35px;
+    text-align: center;
+    font-size: 20px;
+    color:  #E6E6E6;
+    cursor: pointer;
+  }
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    float: right;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    float: right;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    float: right;
+  }
+  .LeftManCont {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+
+  }
+  .MainNavLeftText h3 {
+    color:   #E6E6E6;
+    font-size: 16px;
+    margin: 0;
+  }
+  .RightManCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color:  #E6E6E6;
+  }
+  .MainNavlinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  .RightManCont a {
+    text-decoration: none;
+    color:  #E6E6E6;
+    font-size: 16px;
+  }
+  .RightManCont a:hover {
+    color:  #E6E6E6;
+  }
+
+  .RightManCont h5 {
+    font-size: 16px;
+    margin: 0;
+  }
+  .RightManCont h5 span {
+    margin: 10px;
+  }
+/* End of MainNAv section */
+
+/* start  of  MainHome1 Section */
+.MainParasec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.MainParasec h4{
+  color:  white;
+  margin: 50px 0;
+}
+.LemonOnSliceMain {
+  width: 35px;
+  height: 35px;
+  position: relative;
+
+}
+.MainLemon {
+  transform: rotate(5deg);
+
+}
+.MainLemonSlice {
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+}
+/* End  of  MainHome1 Section */
+
+
+
+
+/* Start of Footer Section */
+.MainFooterdiv {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 100vw;
+ 
+}
+hr {
+  width: 70%;
+  height: 1px;
+  margin-bottom: 20px;
+  background-color: #E6E6E6 !important;
+  opacity: 1 !important;
+}
+.FooterMainText {
+  color:  #E6E6E6;
+}
+.FooterIconsContact {
+  gap: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.FooterIconsContact a {
+  width: 42px ;
+  height: 42px ;
+  padding: 5px;
+  align-self: center;
+  text-decoration: none;
+  color:  #E6E6E6;
+  background-color:  #717171;
+  border-radius: 10px;
+}
+.FooterIconsContact a:hover {
+  color:  #E6E6E6;
+  background-color:  #717171;
+}
+.FooterIconsContact a svg{
+  vertical-align:bottom ;
+
+}
+.LastfooterSec {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.RightLastFooterSec {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
+.RightLastFooterSecdiv {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.img {
+  margin-top: 50px;
+  align-items: center
+}
+.LastfooterSec h4{
+  color: #CCCCCC;
+  font-size: 20px;
+  margin: 0;
+}
+.LastfooterSec h5{
+  color: #CCCCCC;
+  font-size: 14px;
+  margin-top: 20px;
 
-.App-link {
-  color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.LastfooterSec span{
+  color: #CCCCCC;
+  font-size: 14px;
+  display: block;
+  margin: 3px;
 }
+/* End of Footer Section */
