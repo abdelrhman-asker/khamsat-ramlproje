@@ -7,11 +7,10 @@ body {
     background-color: #606060 !important;
     width: 100vw;
     overflow-x: hidden;
-    height: fit-content;
 }
 /* Start Of Animated Start Menue */
 .SpinnerMainDiv {
-  height: 90vh;
+  height: fit-content;
   overflow: hidden;
 }
 .AnimatedStartLogo {
@@ -238,11 +237,11 @@ body {
     margin-left: -7px;
     transition: opacity 0.5s ease-out;
     width: fit-content;
-
 }
 .OpenOnHoverMain {
     transition: opacity 0.5s ease-out;
     width: fit-content;
+    
 }
 .OpenOnHover:hover {
     opacity: 3;
