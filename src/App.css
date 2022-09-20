@@ -243,13 +243,18 @@ body {
     width: fit-content;
     
 }
+
 .OpenOnHover:hover {
     opacity: 3;
 }
 .OpenOnHoverMain:hover + .OpenOnHover {
     opacity: 3;
 }
-
+.MainHomeFExtends {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
 
 
 /* Start of MainNAv section */
