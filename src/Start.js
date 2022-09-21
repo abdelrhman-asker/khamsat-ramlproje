@@ -21,6 +21,7 @@ const Start = () => {
     { loading ? (<Animated style={{display:"flex", justifyContent:"center", alignItems:"center"} } color="#A52A2A"   size={22}  loading={loading}/>) : ( <App />)
 }    
     </div> 
+    
     </>
   )
 }

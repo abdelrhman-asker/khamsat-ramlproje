@@ -231,16 +231,54 @@ body {
   }
 }
 /* End Of Animated Start Menue */
+
+/* Start MainSection Syling */
 .OpenOnHover {
     opacity: 0;
-    margin-top: -170px;
+    margin-top: -140px;
     margin-left: -7px;
     transition: opacity 0.5s ease-out;
     width: fit-content;
+    position: relative;
+  }
+.LinksOnhoverLDiv {
+  top: 50%;
+  left: 0%;
+  position: absolute;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  
+
 }
+.LinksOnhoverLinks {
+  text-decoration: none;
+  font: 14px;
+  color: white;
+  
+  width: 100%;
+  }
+.LinksOnhoverLinks:hover {
+  color: white;
+  }
 .OpenOnHoverMain {
     transition: opacity 0.5s ease-out;
     width: fit-content;
+    position: relative;
+    
+}
+
+.OpenOnHoverMain h4 {
+  position: absolute;
+  top: 40%;
+  width: fit-content;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
     
 }
 
@@ -254,8 +292,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
 }
+/* Start  MainSection Query */
 
+/* End  MainSection Query */
+/* End MainSection Syling */
 
 /* Start of MainNAv section */
 .MainNavCon .row {
